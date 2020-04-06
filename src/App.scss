@@ -1,0 +1,36 @@
+.App {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5rem;
+  .logo {
+    width: 100%;
+    max-width: 30rem;
+    margin: 1rem 0;
+  }
+  .country {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 0.625rem;
+    width: 100%;
+    max-width: 30rem;
+  }
+  .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+}

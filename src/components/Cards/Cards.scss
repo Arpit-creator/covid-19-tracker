@@ -1,0 +1,50 @@
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .Card {
+    background: #FFF;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    width: 100%;
+    max-width: 15rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    margin: 1rem;
+    & > * {
+      padding: 0.25rem;
+      width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .Card__header {
+      font-size: 1.5rem;
+      border-radius: 0.25rem 0.25rem 0 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #FFF;
+    }
+    .Card__value {
+      display: block;
+      font-weight: 600;
+    }
+    .Card__date {
+      color: #8a8a8a;
+    }
+    &.confirmed {
+      .Card__header {
+        background: #8E44AD;
+      }
+    }
+    &.recovered {
+      .Card__header {
+        background: #52BE80;
+      }
+    }
+    &.deaths {
+      .Card__header {
+        background: #E74C3C;
+      }
+    }
+  }
+}
