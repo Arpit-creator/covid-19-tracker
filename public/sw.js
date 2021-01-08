@@ -31,3 +31,17 @@ self.addEventListener('fetch', (event) => {
 		)
 	);
 });
+
+self.addEventListener('activate', (event) => {
+	event.waitUntil(
+		caches.keys().then((cacheNames) => {
+			return Promise.all(
+				cacheNames.map((key) => {
+					if(key !== CACHE_NAME) {
+							return caches.delete(key);
+					}
+				})
+			);
+		})
+	);
+});
