@@ -42,7 +42,11 @@ export default {
 	input: path.resolve(__dirname, "src", "index.js"),
 	output: {
 		file: path.resolve(__dirname, "dist", "bundle.js"),
-		format: "iife"
+		format: "iife",
+		globals: {
+			"react": "React",
+			"react-dom": "ReactDOM"
+		}
 	},
 	plugins: [
 		copy({
