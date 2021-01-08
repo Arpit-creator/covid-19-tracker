@@ -1,6 +1,6 @@
-import React from 'react';
-import './Chart.scss';
-import { Line, Bar } from 'react-chartjs-2';
+import React from "react";
+import "./Chart.scss";
+import { Line, Bar } from "react-chartjs-2";
 
 const Chart = ({ dailyData, data: { confirmed, recovered, deaths }, country }) => {
 	const lineChart = (
@@ -9,14 +9,14 @@ const Chart = ({ dailyData, data: { confirmed, recovered, deaths }, country }) =
 			datasets: [
 				{
 					data: dailyData.map(({ confirmed }) => confirmed),
-					label: 'Infected',
-					borderColor: '#8E44AD',
+					label: "Infected",
+					borderColor: "#8E44AD",
 					fill: true
 				},
 				{
 					data: dailyData.map(({ deaths }) => deaths),
-					label: 'Deaths',
-					borderColor: '#E74C3C',
+					label: "Deaths",
+					borderColor: "#E74C3C",
 					fill: true
 				}
 			]
@@ -25,14 +25,14 @@ const Chart = ({ dailyData, data: { confirmed, recovered, deaths }, country }) =
 
 	const barChart = (
 		<Bar data={{
-			labels: ['Infected', 'Recovered', 'Deaths'],
+			labels: ["Infected", "Recovered", "Deaths"],
 			datasets: [
 				{
-					label: 'People',
+					label: "People",
 					backgroundColor: [
-						'#8E44AD',
-						'#52BE80',
-						'#E74C3C'
+						"#8E44AD",
+						"#52BE80",
+						"#E74C3C"
 					],
 					data: [confirmed, recovered, deaths]
 				}

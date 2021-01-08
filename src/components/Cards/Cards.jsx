@@ -1,6 +1,6 @@
-import React from 'react';
-import './Cards.scss';
-import CountUp from 'react-countup';
+import React from "react";
+import "./Cards.scss";
+import CountUp from "react-countup";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => (
 	<div className="Cards">
