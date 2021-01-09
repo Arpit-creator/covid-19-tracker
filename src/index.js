@@ -10,6 +10,8 @@ ReactDOM.render(
 	document.getElementById("root")
 );
 
-if (process.env.NODE_ENV === "production") {
-	navigator.serviceWorker.register("/sw.js");
-}
+window.addEventListener("load", () => {
+	if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
+		navigator.serviceWorker.register("/sw.js");
+	}
+});

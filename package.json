@@ -42,6 +42,7 @@
 		"rollup": "^2.36.1",
 		"rollup-plugin-copy": "^3.3.0",
 		"rollup-plugin-livereload": "^2.0.0",
+		"rollup-plugin-minify-html": "^0.1.0",
 		"rollup-plugin-node-builtins": "^2.1.2",
 		"rollup-plugin-node-globals": "^1.4.0",
 		"rollup-plugin-postcss": "^4.0.0",

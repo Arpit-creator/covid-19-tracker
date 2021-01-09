@@ -6,7 +6,9 @@ const urlsToCache = [
 	"/bundle.js",
 	"/favicon.png",
 	"/assets/loading.gif",
-	"/assets/logo.png"
+	"/assets/logo.png",
+	"https://unpkg.com/react@17.0.1/umd/react.production.min.js",
+	"https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js"
 ];
 
 self.addEventListener("install", (event) => {
@@ -18,7 +20,7 @@ self.addEventListener("install", (event) => {
 	);
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
 	event.respondWith(
 		caches.match(event.request)
 			.then((response) => {
@@ -32,7 +34,7 @@ self.addEventListener('fetch', (event) => {
 	);
 });
 
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
 	event.waitUntil(
 		caches.keys().then((cacheNames) => {
 			return Promise.all(
