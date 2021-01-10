@@ -8,7 +8,8 @@ const urlsToCache = [
 	"/assets/loading.gif",
 	"/assets/logo.png",
 	"https://unpkg.com/react@17.0.1/umd/react.production.min.js",
-	"https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js"
+	"https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js",
+	"https://fonts.googleapis.com/css?family=Montserrat&display=swap"
 ];
 
 self.addEventListener("install", (event) => {

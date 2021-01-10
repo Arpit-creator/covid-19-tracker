@@ -136,6 +136,10 @@ export default [{
 		builtins(),
 		json(),
 		postcss({
+			minimize: production,
+			config: {
+				path: path.resolve(__dirname, "postcss.config.js")
+			},
 			extensions: [".css", ".scss"],
 			extract: path.resolve(__dirname, "dist", "style.css")
 		}),
